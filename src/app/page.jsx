@@ -11,7 +11,7 @@ export default function Home() {
  }, []);
 
  return (
-  <main className="flex justify-center flex-col py-10 items-center">
+  <main className="flex justify-center flex-col  items-center">
    {loading && <Loader />}
    {!loading && (
     <div className="flex justify-center items-center h-screen">

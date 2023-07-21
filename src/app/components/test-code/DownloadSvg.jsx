@@ -1,6 +1,7 @@
+"use client";
 import React, { useState } from "react";
 import axios from "axios";
-import fiverrSvgs from "../../icons/validUrls.json";
+import fiverrIcons from "@/app/data/icons/fiverrIcons.json";
 import Image from "next/image";
 const DownloadSvg = () => {
  const [links, setlinks] = useState([]);
@@ -74,7 +75,7 @@ const DownloadSvg = () => {
    <div className="flex flex-col space-y-5 justify-center items-center py-5">
     <h1 className="text-3xl ">Fiverr Icons</h1>
     <div className="flex justify-center items-center mt-4 px-5  gap-10 flex-wrap">
-     {fiverrSvgs?.map((link) => (
+     {fiverrIcons?.map((link) => (
       <Image key={link} src={link} width={48} height={48} loading="lazy" alt="" />
      ))}
     </div>
