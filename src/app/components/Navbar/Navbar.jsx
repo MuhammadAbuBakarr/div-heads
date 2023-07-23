@@ -3,11 +3,13 @@ import React from "react";
 // import logo from "";
 const Navbar = () => {
  const navItems = ["Home", "Our Projects", "img", "Services", "Contact Us"];
- const NavItemList = navItems.map((item) => {
+ const NavItemList = navItems.map((item, index) => {
   if (item === "img") {
-   return <Image src={"/divheads.svg"} width={"70"} height={"70"} alt="" className="" />;
+   return (
+    <Image key={index} src={"/divheads.svg"} width={"70"} height={"70"} alt="" className="" />
+   );
   }
-  return <h1>{item}</h1>;
+  return <h1 key={index}>{item}</h1>;
  });
  return (
   <>
